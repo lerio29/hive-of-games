@@ -1,4 +1,6 @@
-# GamesForest
+# HiveOfGames
+
+HiveOfGames a pour but de vous aider à réunir les listes et informations à propos de vos bibliothèques de jeux en ligne/dématérialisées, tels que Steam, Gog ...
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'games-forest'`, () => {
+  it(`should have as title 'hive-of-games'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('games-forest');
+    expect(app.title).toEqual('hive-of-games');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('games-forest app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('hive-of-games app is running!');
   });
 });

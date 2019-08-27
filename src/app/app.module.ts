@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SteamGlobalComponentComponent } from './steam-global-component/steam-global-component.component';
+import { GogGlobalComponentComponent } from './gog-global-component/gog-global-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SteamGlobalComponentComponent,
+    GogGlobalComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
