@@ -1,0 +1,14 @@
+.lotofcards{
+    display: flex !important;
+    flex-flow: row wrap !important;
+    align-items: stretch !important;
+    justify-content: space-around !important;
+}
+
+.lotofcards app-steam-global-component{
+    margin: 1rem
+}
+
+.lotofcards app-gog-global-component{
+    margin: 1%;
+}

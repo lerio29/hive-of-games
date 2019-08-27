@@ -1,2 +1,20 @@
 <p>steam-global-component works!</p>
-<q>https://steamcommunity.com/dev?l=french</q>
+<mat-card ngClass="{{gameProvider}}-card" >
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{gameProvider}}</mat-card-title>
+        <mat-card-subtitle>Show all your games</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://picsum.photos/id/160/200/200" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        
+        <!--https://picsum.photos/id/1047/1920/1080-->
+        <!--https://picsum.photos/id/160/1920/1080-->
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+        <a mat-raised-button routerLink="https://steamcommunity.com/dev?l=french">API</a>
+    </mat-card-actions>
+</mat-card>
+      
