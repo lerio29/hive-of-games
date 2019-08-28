@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SteamApiService } from '../services/steam-api-service/steam-api.service';
+import {map, filter, retry} from 'rxjs/operators';
 
 @Component({
   selector: 'app-steam-global-component',
@@ -9,6 +10,7 @@ import { SteamApiService } from '../services/steam-api-service/steam-api.service
 export class SteamGlobalComponentComponent implements OnInit {
 
   public getOwnedGames: string;
+  public getSchemaForGame: string;
   public gameProvider = 'steam';
 
   constructor(private steamApi: SteamApiService) {
@@ -22,13 +24,27 @@ export class SteamGlobalComponentComponent implements OnInit {
   ngOnInit() {
         this.steamApi
             .getOwnedGames<string>()
-            .subscribe((data: string) => this.getOwnedGames = JSON.stringify(data),
-            error => (err: string) => {
-                console.log('Error : ' + err);
-            },
+            .subscribe(
+              (data: string) => this.getOwnedGames = JSON.stringify(data),
+                error => (err: string) => {
+                  console.log('Error : ' + err);
+                },
             () => {
                 console.log('getOwnedGames completed');
             });
+
+
+
+
+        this.steamApi.getSchemaForGame().subscribe(
+            (data: string) => this.getSchemaForGame = JSON.stringify(data),
+              error => (err: string) => {
+                console.log('Error : ' + err);
+              },
+          () => {
+              console.log('getSchemaForGame completed');
+          });
+
   }
 
 }

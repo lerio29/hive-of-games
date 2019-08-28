@@ -9,15 +9,22 @@ import { Observable } from 'rxjs';
 export class SteamApiService {
 
   private getOwnedGamesUrl: string;
+  private getSchemaForGameUrl: string;
 
   constructor(private http: HttpClient, private configuration: Configuration) {
     this.getOwnedGamesUrl = Configuration.getOwnedGamesUrl;
+    this.getSchemaForGameUrl = Configuration.getSchemaForGame;
 
    }
 
 
   getOwnedGames<T>(): Observable<T> {
     return this.http.get<T>(this.getOwnedGamesUrl);
+  }
+
+
+  getSchemaForGame<T>(): Observable<T> {
+    return this.http.get<T>(this.getSchemaForGameUrl);
   }
 
 
