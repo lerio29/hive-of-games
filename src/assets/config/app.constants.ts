@@ -13,7 +13,7 @@ export class Configuration {
     }
 
     public static get getSchemaForGame(): string {
-        return 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=XXXXXXX&appid=218620';
+        return 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=XXXXXXXXXXXXXX&appid=218620';
     }
 
 }
