@@ -5,17 +5,23 @@
         <mat-card-title>{{gameProvider}}</mat-card-title>
         <mat-card-subtitle>Show all your games</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://picsum.photos/id/160/200/200" alt="Photo of a Shiba Inu">
+    <!--<img mat-card-image src="https://picsum.photos/id/160/200/200" alt="Photo of a phone">-->
+    
+      
     <mat-card-content>
-        
+        <mat-list role="list">
+            <mat-list-item role="listitem">game 1</mat-list-item>
+            <mat-list-item role="listitem">game 2</mat-list-item>
+            <mat-list-item role="listitem">game 3</mat-list-item>
+        </mat-list>
         <!--https://picsum.photos/id/1047/1920/1080-->
         <!--https://picsum.photos/id/160/1920/1080-->
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
+        <!-- <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button> -->
         <a mat-raised-button routerLink="https://steamcommunity.com/dev?l=french">API</a>
     </mat-card-actions>
-    {{getOwnedGames}}
+    
 </mat-card>
       
