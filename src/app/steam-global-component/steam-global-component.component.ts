@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SteamApiService } from '../steam-api.service';
+import { SteamApiService } from '../services/steam-api-service/steam-api.service';
 
 @Component({
   selector: 'app-steam-global-component',
@@ -9,11 +9,9 @@ import { SteamApiService } from '../steam-api.service';
 export class SteamGlobalComponentComponent implements OnInit {
 
   public getOwnedGames: string;
-  
-  public gameProvider: string = "steam";
+  public gameProvider = 'steam';
 
-  constructor(private steamApi: SteamApiService) { 
-    private steamApi: SteamApiService;
+  constructor(private steamApi: SteamApiService) {
   }
 
 
@@ -22,16 +20,14 @@ export class SteamGlobalComponentComponent implements OnInit {
 // https://offering.solutions/blog/articles/2016/02/01/consuming-a-rest-api-with-angular-http-service-in-typescript/
 
   ngOnInit() {
-    
         this.steamApi
             .getOwnedGames<string>()
-            .subscribe((data: any[]) => this.values = data,
-            error => () => {
-                this.toasterService.pop('error', 'Damn', 'Something went wrong...');
+            .subscribe((data: string) => this.getOwnedGames = JSON.stringify(data),
+            error => (err: string) => {
+                console.log('Error : ' + err);
             },
             () => {
-                this.toasterService.pop('success', 'Complete', 'Getting all values complete');
-                this.slimLoadingBarService.complete();
+                console.log('getOwnedGames completed');
             });
   }
 

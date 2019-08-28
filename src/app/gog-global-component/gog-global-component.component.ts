@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GogGlobalComponentComponent implements OnInit {
 
-  gameProvider: string = "gog";
+  public gameProvider = 'gog';
 
   constructor() { }
 

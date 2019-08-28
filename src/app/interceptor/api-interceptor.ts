@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
-export class ApiInterceptor implements HttpInterceptor{
+export class ApiInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         if (!req.headers.has('Content-Type')) {
             req = req.clone({ headers: req.headers.set('Content-Type', 'application/json') });
