@@ -30,7 +30,7 @@ export class SteamGlobalComponentComponent implements OnInit {
                   console.log('Error : ' + err);
                 },
             () => {
-                console.log('getOwnedGames completed');
+                console.log('getOwnedGames completed : ' + this.getOwnedGames );
             });
 
 
@@ -42,7 +42,7 @@ export class SteamGlobalComponentComponent implements OnInit {
                 console.log('Error : ' + err);
               },
           () => {
-              console.log('getSchemaForGame completed');
+              console.log('getSchemaForGame completed' + this.getSchemaForGame);
           });
 
   }

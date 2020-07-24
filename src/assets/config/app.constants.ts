@@ -9,11 +9,11 @@ import { NgModule } from '@angular/core';
 export class Configuration {
 
     public static get getOwnedGamesUrl(): string {
-        return 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=XXXXXXXXX&steamid=XXXXXXXXX&format=json';
+        return 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=989FF220FDEDD7731F581112BE68AC38&steamid=76561198003839094&format=json';
     }
 
     public static get getSchemaForGame(): string {
-        return 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=XXXXXXXXX&appid=218620';
+        return 'http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=989FF220FDEDD7731F581112BE68AC38&appid=218620';
     }
 
 }
